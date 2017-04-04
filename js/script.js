@@ -9,10 +9,10 @@ var j = 0;
                     	    var array = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
                     		console.log('Inside 1st JSON:'+array[i]);
                             console.log(data);
-                            if(data.stream!==null){
+                            if(data.stream!=null){
                             $('.results').append("<a href='"
-                            	+ data._links.channel
-                            	+ "' target='_blank'><div class='row well success'><div class='col-md-3'><img class='img-thumbnail img-responsive' src='"
+                            	+ data.stream.channel.url
+                            	+ "' target='_blank'><div class='row well stream'><div class='col-md-3'><img class='img-thumbnail img-circle img-responsive pic' src='"
                             	+data.stream.preview.medium 
                                 +"' alt=''></div><div class='col-md-3'>"
                                 + data.stream.channel.display_name
@@ -30,21 +30,21 @@ var j = 0;
                             	console.log(d);
                             	$('.results').append("<a href='"
                             	+ d.url
-                            	+ "' target='_blank'><div class='row well warning'><div class='col-md-3'><img class='img-thumbnail img-responsive' src='"
+                            	+ "' target='_blank'><div class='row well stream'><div class='col-md-3'><img class='img-thumbnail img-circle img-responsive pic' src='"
                             	+d.logo
                                 +"' alt=''></div><div class='col-md-3'>"
-                                + data.display_name
+                                +d.display_name
                                 +"</div><div class='col-md-3'>" 
                                 +d.game
                                 +"</div><div class='col-md-3'>Not Streaming</div></a>").fadeIn();
                             } else{
-                            	$('.results').append("<div class='row well danger'><div class='col-md-3'><img class='img-thumbnail' src=''alt='None'></div><div class='col-md-3'>Does Not Exist</div><div class='col-md-3'>Does Not Exist</div><div class='col-md-3'>Does Not Exist</div>").fadeIn();
+                            	$('.results').append("<div class='row well noStream'><div class='col-md-3'><img class='img-thumbnail' src=''alt='None'></div><div class='col-md-3'>Does Not Exist</div><div class='col-md-3'>Does Not Exist</div><div class='col-md-3'>Does Not Exist</div>").fadeIn();
                             }
                             	});
-                            	j++;
-                            }
+                            	
+                            }j++;
                             });
                     }
                 }
-                streamData(); img-responsive
+                streamData();
             });
