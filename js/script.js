@@ -1,7 +1,7 @@
 $(document).ready(function() {
 var j = 0;
             function streamData() {
-            	var streamers = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
+            	var streamers = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "habathcx", "RobotCaleb", "noobs2ninjas"];
                 console.log("Outside");
                 $.each(streamers, function(i, val)  {
                 	console.log('Outside 1st JSON:'+val);
@@ -20,13 +20,13 @@ var j = 0;
                     function postResults(data){
                         $('.results').append("<a href='"
                                 + data.stream.channel.url
-                                + "' target='_blank'><div class='row well stream'><div class='col-md-3'><img class='img-thumbnail img-circle img-responsive pic' src='"
+                                + "' target='_blank'><div class='row stream text-center'><div class='col-md-3'><img class='img-thumbnail img-circle img-responsive pic' src='"
                                 +data.stream.preview.medium 
-                                +"' alt=''></div><div class='col-md-3'>"
+                                +"' alt=''></div><div class='col-md-3'>Name: "
                                 + data.stream.channel.display_name
-                                +"</div><div class='col-md-3'>" 
+                                +"</div><div class='col-md-3'>Game: " 
                                 +data.stream.game
-                                +"</div><div class='col-md-3'>"
+                                +"</div><div class='col-md-3'>Viewers: "
                                 +data.stream.viewers
                                 +"</div></a>").fadeIn();
                     }
@@ -37,15 +37,15 @@ var j = 0;
                                 console.log(d);
                                 $('.results').append("<a href='"
                                 + d.url
-                                + "' target='_blank'><div class='row well stream'><div class='col-md-3'><img class='img-thumbnail img-circle img-responsive pic' src='"
+                                + "' target='_blank'><div class='row notStreaming text-center'><div class='col-md-3'><img class='img-thumbnail img-circle img-responsive pic' src='"
                                 +d.logo
-                                +"' alt=''></div><div class='col-md-3'>"
+                                +"' alt=''></div><div class='col-md-3'>Name: "
                                 +d.display_name
-                                +"</div><div class='col-md-3'>" 
+                                +"</div><div class='col-md-3'>Game: " 
                                 +d.game
                                 +"</div><div class='col-md-3'>Not Streaming</div></a>").fadeIn();}
                                 else{
-                                 $('.results').append("<div class='row well noStream'><div class='col-md-3'><img class='img-thumbnail' src=''alt='None'></div><div class='col-md-3'>Does Not Exist</div><div class='col-md-3'>Does Not Exist</div><div class='col-md-3'>Does Not Exist</div>").fadeIn();
+                                 $('.results').append("<div class='row noStream text-center'><div class='col-md-3'><img class='img-thumbnail' src=''alt='None'></div><div class='col-md-3'>Does Not Exist</div><div class='col-md-3'>Does Not Exist</div><div class='col-md-3'>Does Not Exist</div>").fadeIn();
 
                                 }
                             }
