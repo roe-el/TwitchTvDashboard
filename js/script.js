@@ -1,12 +1,12 @@
 $(document).ready(function() {
 var j = 0;
             function streamData() {
-            	var streamers = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "habathcx", "RobotCaleb", "noobs2ninjas"];
+            	var streamers = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "nightblue3", "drdemolitionmatt", "riotgames", "imaqtpie"];
                 console.log("Outside");
                 $.each(streamers, function(i, val)  {
                 	console.log('Outside 1st JSON:'+val);
                     $.getJSON('https://wind-bow.gomix.me/twitch-api/streams/' + val+ '?callback=?', function(data) {
-                    	    var streamers = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
+                    	    var streamers = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "nightblue3", "drdemolitionmatt", "riotgames", "imaqtpie"];
                     		console.log('Inside 1st JSON:'+val);
                             console.log(data);
                             if(data.stream!=null){
