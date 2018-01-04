@@ -1,24 +1,24 @@
  body {
      padding: 8px 16px 8px 16px;
-     background-color: #6441a5;
+     background-color: #422083;
      overflow-x: hidden;
      font-family: 'Audiowide', cursive;
+     color: #fff;
  }
  
  .twitchTop {
-     background-color: lightgray;
+     background-color: #8663c7;
      margin: 6px 0px 6px 0px;
      padding-bottom: 6px;
  }
  
  .title {
-     font-size: 50px;
-     color: #6441a5;
+     font-size: 25px;
  }
  
  .pic {
-     height: 75px;
-     width: 75px;
+     height: 50px;
+     width: 50px;
  }
  
  .stream:hover,
@@ -32,16 +32,17 @@
      color: inherit;
  }
  
- .well {
-     margin-left: 0px;
-     margin-right: 0px
+ .results {
+     width: 90%;
+     margin-left: auto;
+     margin-right: auto;
  }
  
  .stream {
      background-color: green;
      color: white;
      border-style: solid;
-     border-color: lightgrey;
+     border-color: #8663c7;
      border-width: 4px;
      margin: 6px 0px 6px 0px;
      padding-top: 4px;
@@ -49,10 +50,10 @@
  }
  
  .noStream {
-     background-color: grey;
+     background-color: #8663c7;
      color: white;
      border-style: solid;
-     border-color: lightgrey;
+     border-color: #8663c7;
      border-width: 4px;
      margin: 6px 0px 6px 0px;
      padding-top: 4px;
@@ -62,7 +63,7 @@
  .notStreaming {
      background-color: red;
      border-style: solid;
-     border-color: lightgrey;
+     border-color: #8663c7;
      border-width: 4px;
      color: white;
      margin: 6px 0px 6px 0px;
@@ -71,9 +72,6 @@
  }
  
  .subTitle {
-     font-size: 14px;
+     font-size: 12px;
  }
- 
- .icons {
-     color: lightgray;
- }
+
